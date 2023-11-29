@@ -23,7 +23,7 @@ x0 = np.array([np.pi/3, 0.5])
 # Simulation duration in timesteps
 simulationSteps=400
 totalSimulationTimeVector=np.arange(0, simulationSteps*deltaTime, deltaTime)
-#aaa
+
 # System dynamics (continuous, non-linear) in state-space representation (https://en.wikipedia.org/wiki/State-space_representation)
 def stateSpaceModel(x,t):
     """
