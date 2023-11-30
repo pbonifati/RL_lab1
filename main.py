@@ -64,7 +64,7 @@ EKF = ExtendedKalmanFilter(x_0_mean, x_0_cov, Q, R, deltaTime)
 """
     Simulate process
 """
-measurement_noise_var = 0.05  # Actual measurement noise variance (uknown to the user)
+measurement_noise_var = 0.05  # Actual measurement noise variance (unknown to the user)
 
 for t in range(simulationSteps-1):
     # PREDICT step
