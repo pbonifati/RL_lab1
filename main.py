@@ -86,9 +86,17 @@ for t in range(simulationSteps - 1):
 # TODO
 # ...
 
-def Extract(lst):
-    return np.array(list(list(zip(*lst))[0]))
+def Extract(lst,col):
+    return np.array(list(list(zip(*lst))[col]))
 
-plt.plot(Extract(EKF.posteriorMeans))
-# print(np.array(EKF.posteriorMeans))
-# print(x_t_true)
+tmp1 = Extract(EKF.posteriorMeans,0)
+tmp2 = Extract(EKF.posteriorMeans,1)
+x_t_estimated = np.concatenate((tmp1,tmp2),axis=1)
+
+print(x_t_estimated)
+print(x_t_true)
+
+
+plt.plot(x_t_estimated[:,0])
+plt.plot(x_t_true[:,0])
+plt.show()
