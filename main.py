@@ -96,7 +96,6 @@ plt.plot(tmp)
 # print(np.array(EKF.posteriorMeans))
 # print(x_t_true)
 
-
 raws = [(np.random.rand(20, 100), np.random.rand(20, 100))]
 f, axes = plt.subplots(len(raws[0]), 1)
 for i in range(len(raws[0])):
