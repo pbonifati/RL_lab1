@@ -89,14 +89,6 @@ for t in range(simulationSteps - 1):
 def Extract(lst):
     return np.array(list(list(zip(*lst))[0]))
 
-
-tmp = np.array([[1], [0], [2]])
-plt.plot(tmp)
-# plt.plot(Extract(EKF.posteriorMeans))
+plt.plot(Extract(EKF.posteriorMeans))
 # print(np.array(EKF.posteriorMeans))
 # print(x_t_true)
-
-raws = [(np.random.rand(20, 100), np.random.rand(20, 100))]
-f, axes = plt.subplots(len(raws[0]), 1)
-for i in range(len(raws[0])):
-    axes[i].plot(raws[0][i])
