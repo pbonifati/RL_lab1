@@ -93,10 +93,10 @@ tmp1 = Extract(EKF.posteriorMeans,0)
 tmp2 = Extract(EKF.posteriorMeans,1)
 x_t_estimated = np.concatenate((tmp1,tmp2),axis=1)
 
-print(x_t_estimated)
-print(x_t_true)
+#print(x_t_estimated)
+#print(x_t_true)
 
 
-plt.plot(x_t_estimated[:,0])
-plt.plot(x_t_true[:,0])
+plt.plot(totalSimulationTimeVector,x_t_estimated[:,0],'r')
+plt.plot(totalSimulationTimeVector,x_t_true[:,0],'k')
 plt.show()
